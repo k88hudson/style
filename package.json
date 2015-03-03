@@ -7,13 +7,24 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "less": "lessc less/style.less --source-map-map-inline | autoprefixer -m > ./style.css",
     "watch-less": "watch 'npm run less' ./less",
-    "server": "livereload ./"
+    "server": "webpack-dev-server -d --colors"
   },
   "author": "",
   "license": "MPL-2.0",
   "devDependencies": {
     "less": "^2.4.0",
     "livereload": "^0.3.6",
-    "watch": "^0.14.0"
+    "watch": "^0.14.0",
+    "babel": "^4.6.5",
+    "jsx-loader": "^0.12.2",
+    "json-loader": "^0.5.1",
+    "webpack": "^1.6.0",
+    "babel-core": "^4.6.5",
+    "babel-loader": "^4.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2",
+    "highlight.js": "^8.4.0",
+    "react-highlight": "^0.4.1"
   }
 }

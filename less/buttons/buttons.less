@@ -44,3 +44,16 @@ a.@{prefix}button-selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
 }
+
+/*********************************************************
+* Bootstrap-style
+*/
+
+.btn {
+    &.btn-default {
+        .btn-color(@blue, white);
+    }
+    &.btn-yellow {
+        .btn-color(@yellow, @grey);
+    }
+}

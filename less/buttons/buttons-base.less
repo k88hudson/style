@@ -12,3 +12,56 @@
         border: 0;
     }
 }
+
+/*********************************************************
+* Bootstrap-style
+*/
+.btn-color(@color, @textColor) {
+    color: @textColor;
+    background: @color;
+    box-shadow: 0 3px 0 0 darken(@color, 15%);
+    border: 1px solid transparent;
+    &:hover {
+        background: darken(@color, 5%);
+    }
+    &:active {
+        top: 3px;
+        box-shadow: none;
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+    vertical-align: middle;
+    padding: 15px 20px 15px 20px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: inherit;
+    text-decoration: none;
+
+    border-radius: 3px;
+    .btn-color(#DDD, #333);
+
+    &.btn-inline {
+        vertical-align: baseline;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
